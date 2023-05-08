@@ -10,17 +10,14 @@ class Class:
         if Class.__students_count > 0:
             self.students.append(name)
             self.grades.append(grade)
-            self.__students_count -= 1
+            Class.__students_count -= 1
 
     def get_average_grade(self):
         result = sum(self.grades) / len(self.grades)
-        return result
+        return float(f"{result:.2f}")
 
     def __repr__(self):
-        return f"The students in {class.__name__}: {self.students}.\n" +\
-        "Average grade: {self.get_average_grade}"
-
-
+        return f"The students in {self.name}: {', '.join(self.students)}. Average grade: {self.get_average_grade()}"
 
 
 a_class = Class("11B")
