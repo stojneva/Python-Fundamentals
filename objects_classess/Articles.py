@@ -5,4 +5,3 @@ class Article:
         self.content = content
         self.author = author
 
-    def topkata(self):
